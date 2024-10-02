@@ -37,3 +37,12 @@ jobs:
         push: true
         tags: casmith/mysqldump:latest
         platforms: linux/amd64,linux/arm64
+
+    - name: Build and push restore
+      id: docker_build_restore
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: casmith/mysqlrestore:latest
+        platforms: linux/amd64,linux/arm64
+        file: Dockerfile.restore
