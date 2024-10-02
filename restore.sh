@@ -19,4 +19,4 @@ if [[ ${DB_HOST} == "" ]]; then
 	exit 1
 fi
 
-PGPASSWORD="mysql --password=$DB_PASS --user=$DB_USER --host=$DB_HOST "${DB_NAME}" < $FILE
+mysql --password=$DB_PASS --user=$DB_USER --host=$DB_HOST "${DB_NAME}" < $FILE
